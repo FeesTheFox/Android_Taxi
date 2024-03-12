@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Taxi</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="text_name">Name</string>
+    <string name="text_Surname">Surname</string>
+    <string name="text_registration">REGISTRATION</string>
+    <string name="set_path">SET PATH</string>
+    <string name="call_taxi">CALL TAXI</string>
+    <string name="point_from">Point From</string>
+    <string name="street">Street</string>
+    <string name="house">House</string>
+    <string name="flat">Flat</string>
+    <string name="point_to">Point To</string>
+    <string name="ok">OK</string>
+</resources>
