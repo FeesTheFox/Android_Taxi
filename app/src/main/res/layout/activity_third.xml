@@ -162,12 +162,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ok"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSwitch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PointTo"
         >
 
     </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:textColor="@color/black"
+        android:id="@+id/btnSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="turn off/on Sounds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOk"
+        android:padding="30sp">
+    </androidx.appcompat.widget.SwitchCompat>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
