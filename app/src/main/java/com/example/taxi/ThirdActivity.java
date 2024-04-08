@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.example.taxi.databinding.ActivityMainBinding;
 import com.example.taxi.databinding.ActivityThirdBinding;
 
 public class ThirdActivity extends AppCompatActivity {
@@ -160,9 +159,12 @@ public class ThirdActivity extends AppCompatActivity {
                 if (isChecked) {
                     // Включить звук
                     mediaPlayer.start();
+                    mediaPlayer.setVolume(1.0f, 1.0f);
                 } else {
                     // Отключить звук
-                    mediaPlayer.stop();
+                    mediaPlayer.pause();
+                    mediaPlayer.setVolume(0.0f, 0.0f);
+                    Log.d(TAG, "onCheckedChanged: stopped");
                 }
             }
         });
@@ -184,6 +186,10 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, MediaService.class));
+    }
 
 }
